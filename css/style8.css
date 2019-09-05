@@ -24,6 +24,8 @@ h3 {
     100% {
         background-position: 0 -1100px;
         /*responsible for constantly moving the page up to make the moving clouds effect, also a 'stop n start'*/
+        
+        /*find a way to prevent a 'stop loop'*/
     }
 }
 
