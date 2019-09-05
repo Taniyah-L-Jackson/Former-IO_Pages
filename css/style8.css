@@ -5,11 +5,9 @@
 body {
     margin: 0;
     padding: 0;
-    background: rgb(47, 32, 209);
+    background: rgb(71, 97, 243);
     background-image: url(../media/clouds.png);
     /*makes the background have an image*/
-    animation: 30s clouds linear infinite;
-    /*slowly moves the image up. creating the illusion of smooth moving clouds constantly*/
     color: white;
     font-family: 'Noto Serif', serif;
 }
@@ -18,15 +16,6 @@ h3 {
     font-family: 'Fondamento', cursive; 
     font-size: 30px;
     text-decoration: underline;
-}
-
-@keyframes clouds {
-    100% {
-        background-position: 0 -1100px;
-        /*responsible for constantly moving the page up to make the moving clouds effect, also a 'stop n start'*/
-        
-        /*find a way to prevent a 'stop loop'*/
-    }
 }
 
 /*------------------------------------------------------------------------*/
@@ -41,7 +30,7 @@ h3 {
     position: absolute;
     height: 100px;
     width: 0%;
-    background: #1C1380;
+    background: linear-gradient(180deg, #1F148E, #2518BA);
     opacity: 0;
     animation-name: swoosh;
     animation-duration: 2s;
@@ -55,7 +44,7 @@ h3 {
     top: 100px;
     height: 100px;
     width: 0%;
-    background: #1F148E;
+    background: #2518BA;
     opacity: 0;
     animation-name: swoosh;
     animation-duration: 2s;
@@ -68,7 +57,8 @@ h3 {
     top: 200px;
     height: 100px;
     width: 0%;
-    background: #2115A1;
+    background: linear-gradient(0deg, #1F148E, #2518BA);
+    border-bottom: 3px solid white;
     opacity: 0;
     animation-name: swoosh;
     animation-duration: 2s;
@@ -151,7 +141,8 @@ h3 {
     padding-top: 5px;
     padding-bottom: 10px;
     width: 100%;
-    background: rgb(22, 15, 97); 
+    border-bottom: 3px solid white;
+    background: #1F148E; 
 }
 
 .nav-bar ul {
@@ -237,10 +228,10 @@ main h2 {
     margin-top: 0px;
     margin-bottom: 50px;
     font-size: 40px;
-    border-top: 2px solid rgb(103, 103, 255);
-    border-bottom: 2px solid rgb(103, 103, 255);
-    border-left: 10px solid rgb(103, 103, 255);
-    border-right: 10px solid rgb(103, 103, 255);
+    border-top: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    border-left: 10px solid whitesmoke;
+    border-right: 10px solid whitesmoke;
     /*border corners and edges END------------------------------------------------*/
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -304,7 +295,8 @@ main a {
 /*main END-----------------------------------------------------------------------------*/
 
 footer {
-    background: linear-gradient(0deg, #1F148E,#1C1380);
+    border-top: 3px solid white;
+    background: linear-gradient(0deg, #1F148E ,#2518BA);
 }
 
 footer ul {
@@ -319,7 +311,7 @@ footer i {
 }
 
 footer a {
-    color: rgb(103, 103, 255);
+    color: whitesmoke;
     padding: 2px 5px;
     border-radius: 20px;
 }
