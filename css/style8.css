@@ -5,9 +5,9 @@
 body {
     margin: 0;
     padding: 0;
-    background: rgb(71, 97, 243);
     background-image: url(../media/clouds.png);
     /*makes the background have an image*/
+    background: #4761f3;
     color: white;
     font-family: 'Noto Serif', serif;
 }
@@ -31,12 +31,12 @@ h3 {
     height: 100px;
     width: 0%;
     background: linear-gradient(180deg, #1F148E, #2518BA);
-    opacity: 0;
     animation-name: swoosh;
     animation-duration: 2s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
     /*keeps the width on-page*/
+    opacity: 0;
 }
 
 .hero--shadeTwo {
@@ -45,11 +45,11 @@ h3 {
     height: 100px;
     width: 0%;
     background: #2518BA;
-    opacity: 0;
     animation-name: swoosh;
     animation-duration: 2s;
     animation-delay: 1.2s;
     animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 .hero--shadeThree {
@@ -59,11 +59,11 @@ h3 {
     width: 0%;
     background: linear-gradient(0deg, #1F148E, #2518BA);
     border-bottom: 3px solid white;
-    opacity: 0;
     animation-name: swoosh;
     animation-duration: 2s;
     animation-delay: 1.4s;
     animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 @keyframes swoosh {
@@ -78,8 +78,8 @@ h3 {
 .image {
     margin-top: 10%;
     margin-left: 45%;
-    border-left: 5px solid rgb(0, 0, 0);
-    border-right: 5px solid rgb(0, 0, 0);
+    border-left: 5px solid black;
+    border-right: 5px solid black;
     border-radius: 20%;
     animation-name: fade-in;
     animation-duration: 3s;
@@ -165,7 +165,7 @@ h3 {
     padding: 8px 20px;
     border-radius: 20px;
     background: lavender;
-    color: rgb(103, 103, 255);
+    color: #6767ff;
     font-size: 16px;
     display: inline-block;
 }
@@ -227,7 +227,6 @@ main {
 main h2 {
     margin-top: 0px;
     margin-bottom: 50px;
-    font-size: 40px;
     border-top: 2px solid whitesmoke;
     border-bottom: 2px solid whitesmoke;
     border-left: 10px solid whitesmoke;
@@ -238,6 +237,7 @@ main h2 {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     /*border radiuses END---------------------------------------------------------*/
+    font-size: 40px;
     font-family: 'Fondamento', cursive; 
 }
 
@@ -250,9 +250,9 @@ main p {
 main a {
     margin-bottom: 20px;
     padding: 10px 15px;
-    border-radius: 10px;
     background: lavender;
     color: #2115A1;
+    border-radius: 10px;
     display: inline-block;
 }
 
@@ -295,8 +295,8 @@ main a {
 /*main END-----------------------------------------------------------------------------*/
 
 footer {
-    border-top: 3px solid white;
     background: linear-gradient(0deg, #1F148E ,#2518BA);
+    border-top: 3px solid white;
 }
 
 footer ul {
@@ -311,8 +311,8 @@ footer i {
 }
 
 footer a {
-    color: whitesmoke;
     padding: 2px 5px;
+    color: whitesmoke;
     border-radius: 20px;
 }
 
@@ -337,13 +337,13 @@ footer a:hover {
     }
 
     .hero--shadeTwo {
-        top: 150px;
         height: 150px;
+        top: 150px;
     }
 
     .hero--shadeThree {
-        top: 300px;
         height: 150px;
+        top: 300px;
     }
 
     .block {
@@ -352,8 +352,8 @@ footer a:hover {
     }
 
     .image {
-        border-radius: 0px;
         margin-left: 20%;
+        border-radius: 0px;
     }
 
     .info {
@@ -383,8 +383,8 @@ footer a:hover {
     }
 
     .image {
-        border-radius: 0px;
         margin: 0px auto;
+        border-radius: 0px;
     }
 
     .info {
