@@ -5,9 +5,10 @@
 body {
     margin: 0;
     padding: 0;
+    background: #4761f3;
     background-image: url(../media/clouds.png);
     /*makes the background have an image*/
-    background: #4761f3;
+    /*color over img for specificity reasons*/
     color: white;
     font-family: 'Noto Serif', serif;
 }
