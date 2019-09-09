@@ -354,7 +354,6 @@ footer a:hover {
 
     .image {
         margin-left: 20%;
-        border-radius: 0px;
     }
 
     .info {
@@ -371,6 +370,10 @@ footer a:hover {
         font-size: 10px;
     }
 
+    main {
+        margin-top: 120px;
+    }
+
 }
 
 @media (min-width: 476px) and (max-width: 768px) {
@@ -379,35 +382,34 @@ footer a:hover {
         top: 59px;
     }
 
-    h2 {
-        margin-top: 0px;
+    .block {
+        margin-top: 50px;
+        left: 0%;
     }
 
     .image {
         margin: 0px auto;
-        border-radius: 0px;
     }
 
     .info {
         margin-top: 5px;
         text-align: center;
     }
+    
+    .about {
+        margin-top: 70px;
+    }
 
     .infoTwo {
         text-align: center;
     }
 
-    .block {
-        margin-top: 50px;
-        left: 0%;
-    }
-
-    .about {
-        margin-top: 70px;
-    }
-
     main {
         margin-top: 20%;
+    }
+
+    h2 {
+        margin-top: 0px;
     }
 
     main a {
