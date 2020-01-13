@@ -118,6 +118,7 @@ function moveShelfB() {
         book_Stack_A.classList.remove('bookShiftDown')
 
     }else if(book_Stack_C.classList.contains('bookShiftDown')){
+
         book_Stack_C.classList.remove('bookShiftDown')
     }
 
@@ -132,6 +133,7 @@ function moveShelfC() {
         book_Stack_A.classList.remove('bookShiftDown')
 
     }else if(book_Stack_B.classList.contains('bookShiftDown')) {
+        
         book_Stack_B.classList.remove('bookShiftDown')
     }
 
