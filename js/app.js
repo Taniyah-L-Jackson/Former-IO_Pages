@@ -1,7 +1,7 @@
 //Shelves with carousels
-let carousel_shelfA = document.getElementById('shelfA');
-let carousel_shelfB = document.getElementById('shelfB');
-let carousel_shelfC = document.getElementById('shelfC');
+let shelfA = document.getElementById('shelfA');
+let shelfB = document.getElementById('shelfB');
+let shelfC = document.getElementById('shelfC');
 
 let booksToAdd = 20; //add to shelf
 
@@ -52,19 +52,93 @@ for (let i = 0; i < booksToAdd; i++) {
 
     }
 
-    //Append random stacks of books to shelves with carousels
-    carousel_shelfA.appendChild(stack);
+    // Append random stacks of books to shelves with carousels
 
-    //cloneNode is used for copying a child node that already has a parent
+    //For Shelf A
+    shelfA.appendChild(stack);
+
+    //For Shelf B
+
+    //--cloneNode is used for copying a child node that already has a parent
     let cloneStackB = stack.cloneNode(stack);
 
-    //Once cloned, append to new parent
-    carousel_shelfB.appendChild(cloneStackB);
+    //--Once cloned, append to new parent
+    shelfB.appendChild(cloneStackB);
 
+    //For Shelf C
     let cloneStackC = stack.cloneNode(stack);
-    carousel_shelfC.appendChild(cloneStackC);
+    shelfC.appendChild(cloneStackC);
+
+    //Add carousels last (shown later in code)   
 
 }
+
+//Append HTML-CSS book function to first shelf
+//Append Javascript book function to second shelf
+//Append Achievements book function to third shelf 
+
+//Books with functions
+var red_book = document.getElementById('HTML-CSS');
+var blue_book = document.getElementById('JavaScript');
+var green_book = document.getElementById('Achievements');
+
+//get all books from each shelves
+var book_Stack_A = document.getElementById('shelfA')
+var book_Stack_B = document.getElementById('shelfB')
+var book_Stack_C = document.getElementById('shelfC')
+
+//assign functions to books
+red_book.addEventListener('click', moveShelfA);
+blue_book.addEventListener('click', moveShelfB);
+green_book.addEventListener('click', moveShelfC);
+
+
+//Add functions to main books. Make sure that the function is not applied to more than one book
+
+function moveShelfA() {
+    // .contains checks to see if that class is included with the element 
+
+    if(book_Stack_B.classList.contains('bookShiftDown')) {
+
+        book_Stack_B.classList.remove('bookShiftDown')
+
+    }else if(book_Stack_C.classList.contains('bookShiftDown')) {
+
+        book_Stack_C.classList.remove('bookShiftDown')
+    }
+
+    book_Stack_A.classList.add('bookShiftDown');
+
+}
+
+function moveShelfB() {
+
+    if(book_Stack_A.classList.contains('bookShiftDown')) {
+
+        book_Stack_A.classList.remove('bookShiftDown')
+
+    }else if(book_Stack_C.classList.contains('bookShiftDown')){
+        book_Stack_C.classList.remove('bookShiftDown')
+    }
+
+    book_Stack_B.classList.add('bookShiftDown');
+
+}
+
+function moveShelfC() {
+
+    if(book_Stack_A.classList.contains('bookShiftDown')) {
+
+        book_Stack_A.classList.remove('bookShiftDown')
+
+    }else if(book_Stack_B.classList.contains('bookShiftDown')) {
+        book_Stack_B.classList.remove('bookShiftDown')
+    }
+
+    book_Stack_C.classList.add('bookShiftDown');
+
+}
+
 
 //Carousels
 
@@ -73,23 +147,27 @@ var carousel_base_A = document.getElementById('carousel_HTML_CSS');
 var carousel_base_B = document.getElementById('carousel_JavaScript');
 var carousel_base_C = document.getElementById('carousel_Achievements')
 
+carousel_base_A.classList.add('carousel');
+carousel_base_B.classList.add('carousel');
+carousel_base_C.classList.add('carousel');
+
 //carousel items
 var carousel_A_sliders = [
     "media/hourglass.png",
-    "media/hourglass.png",
-    "media/hourglass.png"
+    "media/firebloom.png",
+    "media/illusion.png"
 ];
 
 var carousel_B_sliders = [
     "media/illusion.png",
-    "media/illusion.png",
-    "media/illusion.png"
+    "media/hourglass.png",
+    "media/firebloom.png",
 ];
 
 var carousel_C_sliders = [
     "media/firebloom.png",
-    "media/firebloom.png",
-    "media/firebloom.png"
+    "media/illusion.png",
+    "media/hourglass.png"
 ];
 
 
