@@ -1,8 +1,7 @@
 * {
     box-sizing: border-box;
 }
-/*a parent-child element that keeps the interior of the border the same size regardless 
-of the border size*/
+/*a parent-child element that keeps the interior of the border the same size regardless of the border size*/
 
 body {
     margin: 0;
