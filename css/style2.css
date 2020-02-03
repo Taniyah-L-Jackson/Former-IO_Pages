@@ -4,8 +4,9 @@
 
 /* Background */
 .bookShelf {
-    width: auto;
+    width: 100%;
     background: #321F03;
+    overflow-x: hidden;
 }
 
 .shelf {
@@ -84,7 +85,9 @@ p {
     background: #640000;
 }
 
-.HTML-CSS:hover {
+.HTML-CSS a:hover {
+    color:#AD930C;
+    text-decoration: none;
     text-shadow: 1px 6px 6px #FF0F0F;
 }
 
@@ -99,7 +102,9 @@ p {
     font-size: 35px;
 }
 
-.JavaScript:hover {
+.JavaScript a:hover {
+    color: #AD930C;
+    text-decoration: none;
     text-shadow: 1px 6px 6px #012BFF;
 }
 
@@ -110,7 +115,9 @@ p {
     background: #0A2C00;
 }
 
-.Achievements:hover {
+.Achievements a:hover {
+    color: #AD930C;
+    text-decoration: none;
     text-shadow: 1px 6px 6px #4DF71B;
 }
 
@@ -159,30 +166,74 @@ p {
 /*Carousel Mark Up*/
 
 .carousel {
-    position: absolute;
+    position: relative;
     margin: 7% 14% 0%;
     padding: 0px;
     height: 490px;
     width: 70%;
-    border: 30px solid rgb(86, 44, 0);;
-    overflow: hidden;
-    z-index: 0;
+    border: 40px solid rgb(86, 44, 0);
 }
 
-.image {
+.carousel h2 {
+    position: absolute;
+    padding: 10px 0px;
+    width: 800px;
+    top: 275px;
+    left: 240px;
+    background: rgb(0, 128, 0);
+    border: 5px solid rgb(165, 42, 42);
+    border-radius: 10px;
+    font-size: 40px;
+    text-align: center;
+    z-index: 2;
+}
+
+.carousel a {
+    position: absolute;
+    width: 200px;
+    top: -83px;
+    border-radius: 10px;
+    color: black;
+    border: 5px solid rgb(86, 44, 0);
+    font-family: 'Times New Roman';
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.view {
+    left: 300px;
+    background: blue;
+}
+
+.test {
+    left: 675px;
+    background: red;
+}
+
+.certs {
+    position: absolute;
+    top: 350px;
+    left: 240px;
+    width: 800px;
+    z-index: 2;
+}
+
+.carousel img {
+    position: absolute;
     height: 100%;
     width: 100%;
 }
 
 button {
     position: absolute;
-    margin-top: 25%;
+    margin-top: 24%;
     padding-top: 15px;
     height: 120px;
     width: 75px;
     background: none;
     border: none;
-    color: grey;
+    color: rgb(0, 0, 0);
     font-size: 40px;
     text-align: center;
 }
@@ -206,7 +257,7 @@ button:hover {
     height: 50px;
     width: 76%;
     background: rgb(44, 27, 2);
-    border-radius: 30px;
+    border-radius: 10px;
     color: rgb(255, 255, 255);
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;

@@ -7,71 +7,71 @@ let booksToAdd = 20; //add to shelf
 
 //add the books back to back in a loop
 //when a certain point is reached, restart the loop
-for (let i = 0; i < booksToAdd; i++) {
+// for (let i = 0; i < booksToAdd; i++) {
 
-    var stack = document.createElement('div');
-    stack.classList.add('books')
+//     var stack = document.createElement('div');
+//     stack.classList.add('books')
 
-    //give books random colors
-    let randomColors = ['purple', 'green', 'teal', 'blue', 'navy', 'brown', 'eggshell']; 
+//     //give books random colors
+//     let randomColors = ['purple', 'green', 'teal', 'blue', 'navy', 'brown', 'eggshell']; 
 
-    let bookColor = randomColors[Math.floor(Math.random() * randomColors.length)]; 
+//     let bookColor = randomColors[Math.floor(Math.random() * randomColors.length)]; 
 
-    if (stack.className == 'books') {
+//     if (stack.className == 'books') {
 
-        switch (bookColor) {
+//         switch (bookColor) {
 
-            case 'purple':
-                stack.classList.add('purple');
-                break;
+//             case 'purple':
+//                 stack.classList.add('purple');
+//                 break;
         
-            case 'green':
-                stack.classList.add('green');
-                break;
+//             case 'green':
+//                 stack.classList.add('green');
+//                 break;
 
-            case 'teal':
-                stack.classList.add('teal');
-                break;
+//             case 'teal':
+//                 stack.classList.add('teal');
+//                 break;
             
-            case 'blue':
-                stack.classList.add('purple');
-                break;
+//             case 'blue':
+//                 stack.classList.add('purple');
+//                 break;
 
-            case 'navy': 
-                stack.classList.add('navy');
-                break;
+//             case 'navy': 
+//                 stack.classList.add('navy');
+//                 break;
             
-            case 'brown':
-                stack.classList.add('brown');
-                break;
+//             case 'brown':
+//                 stack.classList.add('brown');
+//                 break;
             
-            case 'eggshell':
-                stack.classList.add('eggshell');
-                break;
-        }
+//             case 'eggshell':
+//                 stack.classList.add('eggshell');
+//                 break;
+//         }
 
-    }
+//     }
 
-    // Append random stacks of books to shelves with carousels
+//     // Append random stacks of books to shelves with carousels
 
-    //For Shelf A
-    shelfA.appendChild(stack);
+//     //For Shelf A
+//     shelfA.appendChild(stack);
 
-    //For Shelf B
+//     //For Shelf B
 
-    //--cloneNode is used for copying a child node that already has a parent
-    let cloneStackB = stack.cloneNode(stack);
+//     //--cloneNode is used for copying a child node that already has a parent
+//     let cloneStackB = stack.cloneNode(stack);
 
-    //--Once cloned, append to new parent
-    shelfB.appendChild(cloneStackB);
+//     //--Once cloned, append to new parent
+//     shelfB.appendChild(cloneStackB);
 
-    //For Shelf C
-    let cloneStackC = stack.cloneNode(stack);
-    shelfC.appendChild(cloneStackC);
+//     //For Shelf C
+//     let cloneStackC = stack.cloneNode(stack);
+//     shelfC.appendChild(cloneStackC);
 
-    //Add carousels last (shown later in code)   
+//     //Add carousels last (shown later in code)   
 
-}
+// }
 
 //Append HTML-CSS book function to first shelf
 //Append Javascript book function to second shelf
@@ -142,222 +142,311 @@ function moveShelfC() {
 }
 
 
-//Carousels
-
+//Carousels:
+//-----------------------------------------------------------
 //Carousel bases
 var carousel_base_A = document.getElementById('carousel_HTML_CSS');
 var carousel_base_B = document.getElementById('carousel_JavaScript');
 var carousel_base_C = document.getElementById('carousel_Achievements')
 
-carousel_base_A.classList.add('carousel');
-carousel_base_B.classList.add('carousel');
-carousel_base_C.classList.add('carousel');
+//carousel items:
+var current_indexA = 0; //current carouselA index
+var current_indexB = 0; //current carouselB index 
+var current_indexC = 0; //current carouselC index
 
-//carousel items
-var carousel_A_sliders = [
-    "media/hourglass.png",
-    "media/firebloom.png",
-    "media/illusion.png"
+//--ids and lists (Carousel A):
+var carousel_A_img = document.getElementById('imageA');
+var carousel_A_caption = document.getElementById('captionA');
+var carousel_A_Cover = document.getElementById('viewA');
+var carousel_A_Test = document.getElementById('testA');
+
+var carousel_A_list = [
+    
+    {image: "media/bloom.png",
+    caption: 'Bloom Project',
+    view: 'https://github.com/Taniyah-L-Jackson/bloom',
+    test: 'https://taniyah-l-jackson.github.io/bloom/'},
+
+    {image: "media/venedor.png",
+    caption: 'Venedor Project',
+    view: 'https://github.com/Taniyah-L-Jackson/venedor',
+    test: 'https://taniyah-l-jackson.github.io/venedor/'},
+
+    {image: "media/hourglass.png",
+    caption: 'Hourglass Experiment',
+    view: 'https://github.com/Taniyah-L-Jackson/hourglass',
+    test: 'https://taniyah-l-jackson.github.io/hourglass/'},
+
+    {image: "media/spinning-squares.png",
+    caption: 'Spinning Squares Experiment',
+    view: 'https://github.com/Taniyah-L-Jackson/position-assignment',
+    test: 'https://taniyah-l-jackson.github.io/position-assignment/'},
+
+    {image: "media/illusion.png",
+    caption: 'Illusion Experiment',
+    view: 'https://github.com/Taniyah-L-Jackson/illusion',
+    test: 'https://taniyah-l-jackson.github.io/illusion/'},
+
 ];
+//store in list
 
-var carousel_B_sliders = [
-    "media/illusion.png",
-    "media/hourglass.png",
-    "media/firebloom.png",
+//show for first carousel
+carousel_A_img.src = carousel_A_list[current_indexA].image;
+carousel_A_caption.innerText = carousel_A_list[current_indexA].caption;
+//view code
+carousel_A_Cover.href = carousel_A_list[current_indexA].view
+//test code
+carousel_A_Test.href = carousel_A_list[current_indexA].view
+
+
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+
+//--ids and lists (Carousel B):
+
+var carousel_B_img = document.getElementById('imageB');
+var carousel_B_caption = document.getElementById('captionB');
+var carousel_B_Cover = document.getElementById('viewB');
+var carousel_B_Test = document.getElementById('testB');
+
+var carousel_B_list = [
+    
+    {image: "media/smokingAge.png",
+    caption: 'Smoking Age Detector',
+    view: 'https://github.com/Taniyah-L-Jackson/Smoking_Age',
+    test: ' https://taniyah-l-jackson.github.io/Smoking_Age/'},
+
+    {image: "media/passwordMaker.png",
+    caption: 'Password Maker',
+    view: 'https://github.com/Taniyah-L-Jackson/Password-Maker',
+    test: 'https://taniyah-l-jackson.github.io/Password-Maker/'},
+
+    {image: "media/battleship.png",
+    caption: 'BattleShip Game',
+    view: 'https://github.com/Taniyah-L-Jackson/Battleship',
+    test: 'https://taniyah-l-jackson.github.io/Battleship/'},
+
+    {image: "media/adventureGame.png",
+    caption: 'Adventure Game',
+    view: 'https://github.com/Taniyah-L-Jackson/Adventure_Prompt',
+    test: 'https://taniyah-l-jackson.github.io/Adventure_Prompt/'},
+
+    {image: "media/baristaGame.png",
+    caption: 'Barista Game',
+    view: 'https://github.com/Taniyah-L-Jackson/Baristas',
+    test: 'https://taniyah-l-jackson.github.io/Baristas/'},
+
+
 ];
+//store in list
 
-var carousel_C_sliders = [
-    "media/firebloom.png",
-    "media/illusion.png",
-    "media/hourglass.png"
+//show for second carousel
+carousel_B_img.src = carousel_B_list[current_indexB].image;
+carousel_B_caption.innerText = carousel_B_list[current_indexB].caption;
+carousel_B_Cover.href = carousel_B_list[current_indexB].view;
+carousel_B_Test.href = carousel_B_list[current_indexB].test; 
+//------------------------------------------------------------
+//-----------------------------------------------------------
+
+//--ids and lists (Carousel C):
+
+var carousel_C_img = document.getElementById('imageC');
+var carousel_C_caption = document.getElementById('captionC');
+var carousel_C_Cover = document.getElementById('viewC');
+
+
+var carousel_C_list = [
+    
+    {image: "media/HTML-CSS_Cert.jpg",
+    caption: 'HTML/CSS Certificate',
+    view: '#link',
+    test: '#link'},
+
+    {image: "media/JavaScript_Cert.jpg",
+    caption: 'JavaScript Certificate',
+    view: '#link', 
+    test: '#link'},
+
+    {image: "media/Python_Cert.jpg",
+    caption: 'Python Certificate',
+    view: '#link',
+    test: '#link'},
+
+    {image: "media/responsive_web_design.png",
+    caption: 'Responsive Web Design',
+    view: '#link',
+    test: '#link'},
+
+    {image: "media/JavaScript_Algorithms_and_Data_Structures.png",
+    caption: 'JavaScript Algorithms',
+    view: '#link',
+    test: '#link'},
+
 ];
+//store in list
+
+//show for second carousel
+carousel_C_img.src = carousel_C_list[current_indexC].image;
+carousel_C_caption.innerText = carousel_C_list[current_indexC].caption;
+//view cert
+carousel_C_Cover.href = carousel_C_list[current_indexC].view;
 
 
-var caption_box_A = [
-    "caption_A",
-    "caption_B",
-    "caption_C"
-];
+//-----------------------------------------------------
+//-----------------------------------------------------
 
-var caption_box_B = [
-    "caption_A",
-    "caption_B",
-    "caption_C"
-];
+//--buttons:
 
-var caption_box_C = [
-    "caption_A",
-    "caption_B",
-    "caption_C"
-];
+//---left:
+var left_buttonA = document.getElementById('leftA');
+left_buttonA.addEventListener('click', prev);
+
+var left_buttonB = document.getElementById('leftB');
+left_buttonB.addEventListener('click', prev);
+
+var left_buttonC = document.getElementById('leftC');
+left_buttonC.addEventListener('click', prev);
 
 
-//carousel add-ins
+//---right:
+var right_buttonA = document.getElementById('rightA');
+right_buttonA.addEventListener('click', next);
 
-//left button
-var left_button_A = document.createElement('button');
-left_button_A.classList.add('left');
-left_button_A.innerText = '<';
+var right_buttonB = document.getElementById('rightB');
+right_buttonA.addEventListener('click', next);
 
-//cloned left buttons 
-var left_button_B = left_button_A.cloneNode(left_button_A);
-var left_button_C = left_button_A.cloneNode(left_button_A);
-
-//right button
-var right_button_A = document.createElement('button');
-right_button_A.classList.add('right');
-right_button_A.innerText = '>';
-
-//cloned right buttons 
-var right_button_B = right_button_A.cloneNode(right_button_A);
-var right_button_C = right_button_A.cloneNode(right_button_A);
-
-//images
-var image_A = document.createElement('img');
-image_A.classList.add('image');
-
-//cloned images
-var image_B = image_A.cloneNode(image_A);
-var image_C = image_A.cloneNode(image_A);
-
-// image.classList.add('image_animation');
-
-//captions
-var captions_A = document.createElement('a');
-captions_A.classList.add('captions')
-captions_A.href = "#link";
-
-//cloned captions
-var captions_B = captions_A.cloneNode(captions_A);
-var captions_C = captions_A.cloneNode(captions_A);
-
-//start first images captions
-captions_A.innerText = caption_box_A[0]
-captions_B.innerText = caption_box_B[0]
-captions_C.innerText = caption_box_C[0]
-
-//Images show first elements
-image_A.src = carousel_A_sliders[0];
-image_B.src = carousel_B_sliders[0];
-image_C.src = carousel_C_sliders[0];
-
-//Append to each carousel
-
-//Carousel_A
-carousel_base_A.appendChild(left_button_A);
-carousel_base_A.appendChild(right_button_A);
-carousel_base_A.appendChild(captions_A);
-carousel_base_A.appendChild(image_A);
-
-//Carousel_B
-carousel_base_B.appendChild(left_button_B);
-carousel_base_B.appendChild(right_button_B);
-carousel_base_B.appendChild(captions_B);
-carousel_base_B.appendChild(image_B);
-
-//Carousel_C
-carousel_base_C.appendChild(left_button_C);
-carousel_base_C.appendChild(right_button_C);
-carousel_base_C.appendChild(captions_C);
-carousel_base_C.appendChild(image_C);
-
-
-//button event listeners
-//For Carousel_A
-left_button_A.addEventListener('click', prev_A);
-right_button_A.addEventListener('click', next_A);
-
-//For Carousel_B
-left_button_B.addEventListener('click', prev_B);
-right_button_B.addEventListener('click', next_B);
-
-//For Carousel_C
-left_button_C.addEventListener('click', prev_C);
-right_button_C.addEventListener('click', next_C);
-
-//looping through images   
-var current_image = 0; //starting point
-
-// image.classList.remove('image_animation');
+var right_buttonC = document.getElementById('rightC');
+right_buttonA.addEventListener('click', next);
 
 //All button functions
-function prev_A() {
+function prev(event) {
 
-    var left = current_image; //left starts from the current image displayed
+    left = event.currentTarget.value;
 
-    left-- //go backwards in list
+    switch (left) {
+        case 'leftA':
 
-    if (left < 0) { //if left is pressed again, reset loop
+            current_indexA--
 
-        var left = (carousel_A_sliders.length - 1); //start loop from end
+            if (current_indexA < 0) { //if left is pressed again, reset loop
 
+                current_indexA = (carousel_A_list.length - 1); //start loop from end
+
+            }
+            
+            carousel_A_img.src = carousel_A_list[current_indexA].image;
+            carousel_A_caption.innerText = carousel_A_list[current_indexA].caption;
+            carousel_A_link = carousel_A_list[current_indexA].link;
+            carousel_A_caption.href = carousel_A_link;
+            break;
+    
+        case 'leftB':
+
+            current_indexB--
+
+            if (current_indexB < 0) { 
+
+                current_indexB = (carousel_B_list.length - 1);
+
+            }
+            
+            carousel_B_img.src = carousel_B_list[current_indexB].image;
+            carousel_B_caption.innerText = carousel_B_list[current_indexB].caption;
+            carousel_B_link = carousel_B_list[current_indexB].link;
+            carousel_B_caption.href = carousel_B_link;
+
+            break;
+
+        case 'leftC':
+
+            current_indexC--
+
+            if (current_indexC < 0) { 
+
+                current_indexC = (carousel_C_list.length - 1);
+
+            }
+            
+            carousel_C_img.src = carousel_C_list[current_indexC].image;
+            carousel_C_caption.innerText = carousel_C_list[current_indexC].caption;
+            carousel_C_link = carousel_C_list[current_indexC].link;
+            carousel_C_caption.href = carousel_C_link;
+
+            break;
     }
+
+  
+
+
+
+
 
     // image.classList.add('image_animation');
 
-    //Images
-    image_A.src = carousel_A_sliders[left];
+    //Display
+    
 
-    //Image
-    captions_A.innerText = caption_box_A[left];
-
-
-    current_image = left; //current image is where 'left' stopped
-
-    return current_image;
 }
 
-function prev_B() {
+function next(event) {
 
-    var left = current_image; //left starts from the current image displayed
+    right = event.currentTarget.value;
 
-    left-- //go backwards in list
+    switch (right) {
+        case 'rightA':
 
-    if (left < 0) { //if left is pressed again, reset loop
+            current_indexA++
 
-        var left = (carousel_B_sliders.length - 1); //start loop from end
+            if (current_indexA > (carousel_A_list.length - 1)) { //if right is pressed again, reset loop
 
+                current_indexA = 0; //start loop from beginning
+
+            }
+            
+            //display new set
+            carousel_A_img.src = carousel_A_list[current_indexA].image;
+            carousel_A_caption.innerText = carousel_A_list[current_indexA].caption;
+            carousel_A_Cover.href = carousel_A_list[current_indexA].view;
+            carousel_A_Test.href = carousel_A_list[current_indexA].test; 
+            break;
+    
+        case 'rightB':
+
+            current_indexB--
+
+            if (current_indexB > (carousel_B_list.length - 1)) { 
+
+                current_indexB = 0;
+
+            }
+            
+            carousel_B_img.src = carousel_B_list[current_indexB].image;
+            carousel_B_caption.innerText = carousel_B_list[current_indexB].caption;
+            carousel_B_link = carousel_B_list[current_indexB].link;
+            carousel_B_caption.href = carousel_B_link;
+
+            break;
+
+        case 'rightC':
+
+            current_indexC--
+
+            if (current_indexC > (carousel_C_list.length - 1)) { 
+
+                current_indexC = 0;
+
+            }
+            
+            carousel_C_img.src = carousel_C_list[current_indexC].image;
+            carousel_C_caption.innerText = carousel_C_list[current_indexC].caption;
+            carousel_C_link = carousel_C_list[current_indexC].link;
+            carousel_C_caption.href = carousel_C_link;
+
+            break;
     }
 
-    // image.classList.add('image_animation');
-
-    //Images
-    image_B.src = carousel_B_sliders[left];
-
-    //Image
-    captions_B.innerText = caption_box_B[left];
-
-
-    current_image = left; //current image is where 'left' stopped
-
-    return current_image;
 }
 
-function prev_C() {
-
-    var left = current_image; //left starts from the current image displayed
-
-    left-- //go backwards in list
-
-    if (left < 0) { //if left is pressed again, reset loop
-
-        var left = (carousel_C_sliders.length - 1); //start loop from end
-
-    }
-
-    // image.classList.add('image_animation');
-
-    //Images
-    image_C.src = carousel_C_sliders[left];
-
-    //Image
-    captions_C.innerText = caption_box_C[left];
-
-
-    current_image = left; //current image is where 'left' stopped
-
-    return current_image;
-}
 
 function next_A() {
 
