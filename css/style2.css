@@ -30,10 +30,20 @@
     float: left;
 }
 
-h1, h2 {
+h1 {
     margin-top: 50px;
     text-align: center;
     color: #AD930C;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+h2 {
+    position: absolute;
+    top: 300px;
+    left: 60px;
+    text-align: center;
+    color: rgb(173, 147, 12);
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
 }
@@ -46,12 +56,13 @@ h1, h2 {
 }
 */
 .profile {
-    margin-top: 70px;
-    margin-left: 45px;
-    height: 200px;
+    position: absolute;
+    top: 150px;
+    left: 60px;
+    height: 120px;
     width: 200px;
-    background: black;
-    border: 4px solid #AD930C;
+    background: url('../media/Taniyah_Jackson.png');
+    border: 4px solid rgb(173, 147, 12);
     border-radius: 20px;
 } 
 /* -------------------------------- */
@@ -65,17 +76,28 @@ h1, h2 {
     float: left;
 }
 
+.event_books h1 {
+    margin-top: 0px;
+    margin-left: 60px;
+    width: 26px;
+    word-break: break-all;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 38px;
+}
+
 a {
     color: #AD930C;
 }
 
 p {
-    margin-left: 60px;
-    width: 1px;
+    position: absolute;
+    top: 375px;
+    padding: 0px 20px;
+    width: 300px;
     font-family: initial;
-    font-size: 30px;
-    text-transform: uppercase;
-    word-break: break-all;
+    font-size: 20px;
+    color: black;
 }
 
 .HTML-CSS {
@@ -98,7 +120,7 @@ p {
     background: #000C48;
 }
 
-.font-adjust { /*for JavaScript only*/
+.font-adj { /*for JavaScript only*/
     font-size: 35px;
 }
 
@@ -138,26 +160,122 @@ p {
 }
 
 .font-adjust2 { /*For HP only*/
+    color: black;
     font-size: 25px;
 }
 
-.honeyP_Box {
-    margin-top: 0px;
-    margin-left: 75px;
+.social_Box {
+    position: relative;
+    margin-top: -30px;
+    margin-left: 115px;
     height: 680px;
     width: 400px;
-    background: rgb(95, 56, 0);
-    border: 4px solid rgb(0, 0, 0);
     border-radius: 5%;
 }
 
-.oval {
-    margin-top: 60px;
-    margin-left: 35px;
-    height: 556px;
-    width: 325px;
-    background: #A2916A;
-    border-radius: 10%;
+.github {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    height: 250px;
+    width: 150px;
+    background: grey;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+.facebook {
+    position: absolute;
+    top: 30px;
+    left: 150px;
+    height: 250px;
+    width: 150px;
+    background: navy;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+.linkedIn {
+    position: absolute;
+    top: 30px;
+    left: 300px;
+    height: 250px;
+    width: 150px;
+    background: blue;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+.twitter {
+    position: absolute;
+    top: 280px;
+    left: 0px;
+    height: 250px;
+    width: 150px;
+    background: lightblue;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+.instagram {
+    position: absolute;
+    top: 280px;
+    left: 150px;
+    height: 250px;
+    width: 150px;
+    background: purple;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+.resume {
+    position: absolute;
+    top: 280px;
+    left: 300px;
+    height: 250px;
+    width: 150px;
+    background: red;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+.email {
+    position: absolute;
+    top: 530px;
+    left: 0px;
+    height: 180px;
+    width: 450px;
+    background: white;
+    border: 10px solid black;
+    border-radius: 10px;
+}
+
+.fab {
+    margin-top: 85px;
+    margin-left: 40px;
+    font-size: 50px;
+}
+
+.fa-facebook-f {
+    
+    margin-left: 50px;
+
+}
+
+.fas {
+    margin-top: 85px;
+    margin-left: 40px;
+    font-size: 50px;
+}
+
+.fas fa-file {
+    margin-left: 45px;
+}
+
+.far {
+    margin-top: 50px;
+    margin-left: 180px;
+    font-size: 70px;
 }
 
 
@@ -190,7 +308,7 @@ p {
 
 .carousel a {
     position: absolute;
-    width: 200px;
+    width: 500px;
     top: -83px;
     border-radius: 10px;
     color: black;
@@ -202,7 +320,7 @@ p {
 }
 
 .view {
-    left: 300px;
+    left: 50px;
     background: blue;
 }
 
@@ -326,14 +444,17 @@ button:hover {
 
 .shelfA {
     position: absolute;
+    z-index: 2;
 }
 
 .shelfB {
     position: absolute;
+    z-index: 2;
 }
 
 .shelfC {
     position: absolute;
+    z-index: 2;
 }
 
 /* ------------------------------ */

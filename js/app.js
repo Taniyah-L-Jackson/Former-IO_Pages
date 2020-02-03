@@ -7,71 +7,71 @@ let booksToAdd = 20; //add to shelf
 
 //add the books back to back in a loop
 //when a certain point is reached, restart the loop
-// for (let i = 0; i < booksToAdd; i++) {
+for (let i = 0; i < booksToAdd; i++) {
 
-//     var stack = document.createElement('div');
-//     stack.classList.add('books')
+    var stack = document.createElement('div');
+    stack.classList.add('books')
 
-//     //give books random colors
-//     let randomColors = ['purple', 'green', 'teal', 'blue', 'navy', 'brown', 'eggshell']; 
+    //give books random colors
+    let randomColors = ['purple', 'green', 'teal', 'blue', 'navy', 'brown', 'eggshell']; 
 
-//     let bookColor = randomColors[Math.floor(Math.random() * randomColors.length)]; 
+    let bookColor = randomColors[Math.floor(Math.random() * randomColors.length)]; 
 
-//     if (stack.className == 'books') {
+    if (stack.className == 'books') {
 
-//         switch (bookColor) {
+        switch (bookColor) {
 
-//             case 'purple':
-//                 stack.classList.add('purple');
-//                 break;
+            case 'purple':
+                stack.classList.add('purple');
+                break;
         
-//             case 'green':
-//                 stack.classList.add('green');
-//                 break;
+            case 'green':
+                stack.classList.add('green');
+                break;
 
-//             case 'teal':
-//                 stack.classList.add('teal');
-//                 break;
+            case 'teal':
+                stack.classList.add('teal');
+                break;
             
-//             case 'blue':
-//                 stack.classList.add('purple');
-//                 break;
+            case 'blue':
+                stack.classList.add('purple');
+                break;
 
-//             case 'navy': 
-//                 stack.classList.add('navy');
-//                 break;
+            case 'navy': 
+                stack.classList.add('navy');
+                break;
             
-//             case 'brown':
-//                 stack.classList.add('brown');
-//                 break;
+            case 'brown':
+                stack.classList.add('brown');
+                break;
             
-//             case 'eggshell':
-//                 stack.classList.add('eggshell');
-//                 break;
-//         }
+            case 'eggshell':
+                stack.classList.add('eggshell');
+                break;
+        }
 
-//     }
+    }
 
-//     // Append random stacks of books to shelves with carousels
+    // Append random stacks of books to shelves with carousels
 
-//     //For Shelf A
-//     shelfA.appendChild(stack);
+    //For Shelf A
+    shelfA.appendChild(stack);
 
-//     //For Shelf B
+    //For Shelf B
 
-//     //--cloneNode is used for copying a child node that already has a parent
-//     let cloneStackB = stack.cloneNode(stack);
+    //--cloneNode is used for copying a child node that already has a parent
+    let cloneStackB = stack.cloneNode(stack);
 
-//     //--Once cloned, append to new parent
-//     shelfB.appendChild(cloneStackB);
+    //--Once cloned, append to new parent
+    shelfB.appendChild(cloneStackB);
 
-//     //For Shelf C
-//     let cloneStackC = stack.cloneNode(stack);
-//     shelfC.appendChild(cloneStackC);
+    //For Shelf C
+    let cloneStackC = stack.cloneNode(stack);
+    shelfC.appendChild(cloneStackC);
 
-//     //Add carousels last (shown later in code)   
+    //Add carousels last (shown later in code)   
 
-// }
+}
 
 //Append HTML-CSS book function to first shelf
 //Append Javascript book function to second shelf
@@ -259,28 +259,23 @@ var carousel_C_list = [
     
     {image: "media/HTML-CSS_Cert.jpg",
     caption: 'HTML/CSS Certificate',
-    view: '#link',
-    test: '#link'},
+    view: 'https://www.sololearn.com/Certificate/1014-14588647/pdf/'},
 
     {image: "media/JavaScript_Cert.jpg",
     caption: 'JavaScript Certificate',
-    view: '#link', 
-    test: '#link'},
+    view: 'https://www.sololearn.com/Certificate/1024-14588647/pdf/'},
 
     {image: "media/Python_Cert.jpg",
     caption: 'Python Certificate',
-    view: '#link',
-    test: '#link'},
+    view: 'https://www.sololearn.com/Certificate/1073-14588647/pdf/'},
 
     {image: "media/responsive_web_design.png",
     caption: 'Responsive Web Design',
-    view: '#link',
-    test: '#link'},
+    view: 'https://www.freecodecamp.org/certification/lanesha_h/responsive-web-design'},
 
     {image: "media/JavaScript_Algorithms_and_Data_Structures.png",
     caption: 'JavaScript Algorithms',
-    view: '#link',
-    test: '#link'},
+    view: 'https://www.freecodecamp.org/certification/lanesha_h/javascript-algorithms-and-data-structures'},
 
 ];
 //store in list
