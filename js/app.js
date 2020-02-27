@@ -194,9 +194,9 @@ var carousel_A_list = [
 carousel_A_img.src = carousel_A_list[current_indexA].image;
 carousel_A_caption.innerText = carousel_A_list[current_indexA].caption;
 //view code
-carousel_A_Cover.href = carousel_A_list[current_indexA].view
+carousel_A_Cover.href = carousel_A_list[current_indexA].view;
 //test code
-carousel_A_Test.href = carousel_A_list[current_indexA].view
+carousel_A_Test.href = carousel_A_list[current_indexA].test;
 
 
 //-----------------------------------------------------------
@@ -308,10 +308,10 @@ var right_buttonA = document.getElementById('rightA');
 right_buttonA.addEventListener('click', next);
 
 var right_buttonB = document.getElementById('rightB');
-right_buttonA.addEventListener('click', next);
+right_buttonB.addEventListener('click', next);
 
 var right_buttonC = document.getElementById('rightC');
-right_buttonA.addEventListener('click', next);
+right_buttonC.addEventListener('click', next);
 
 //All button functions
 function prev(event) {
@@ -370,12 +370,6 @@ function prev(event) {
             break;
     }
 
-  
-
-
-
-
-
     // image.classList.add('image_animation');
 
     //Display
@@ -407,7 +401,7 @@ function next(event) {
     
         case 'rightB':
 
-            current_indexB--
+            current_indexB++
 
             if (current_indexB > (carousel_B_list.length - 1)) { 
 
@@ -417,14 +411,14 @@ function next(event) {
             
             carousel_B_img.src = carousel_B_list[current_indexB].image;
             carousel_B_caption.innerText = carousel_B_list[current_indexB].caption;
-            carousel_B_link = carousel_B_list[current_indexB].link;
-            carousel_B_caption.href = carousel_B_link;
+            carousel_B_Cover.href = carousel_B_list[current_indexB].view;
+            carousel_B_Test.href = carousel_B_list[current_indexB].test; 
 
             break;
 
         case 'rightC':
 
-            current_indexC--
+            current_indexC++
 
             if (current_indexC > (carousel_C_list.length - 1)) { 
 
@@ -434,8 +428,7 @@ function next(event) {
             
             carousel_C_img.src = carousel_C_list[current_indexC].image;
             carousel_C_caption.innerText = carousel_C_list[current_indexC].caption;
-            carousel_C_link = carousel_C_list[current_indexC].link;
-            carousel_C_caption.href = carousel_C_link;
+            carousel_C_Cover.href = carousel_C_list[current_indexC].view;
 
             break;
     }
@@ -443,74 +436,6 @@ function next(event) {
 }
 
 
-function next_A() {
-
-    var right = current_image;
-
-    right++ //go forwards in list
-
-    if (right > (carousel_A_sliders.length - 1)) { //if right is pressed again, rest loop
-        
-        right = 0; //start loop from beginning
-    }
-
-    //Images
-    image_A.src = carousel_A_sliders[right];
-
-    //Captions
-    captions_A.innerText = caption_box_A[right];
-
-    current_image = right; //current_image is where 'right' stopped
-
-    return current_image;
-
-}
-
-function next_B() {
-
-    var right = current_image;
-
-    right++ //go forwards in list
-
-    if (right > (carousel_B_sliders.length - 1)) { //if right is pressed again, rest loop
-        
-        right = 0; //start loop from beginning
-    }
-
-    //Images
-    image_B.src = carousel_B_sliders[right];
-
-    //Captions
-    captions_B.innerText = caption_box_B[right];
-
-    current_image = right; //current_image is where 'right' stopped
-
-    return current_image;
-
-}
-
-function next_C() {
-
-    var right = current_image;
-
-    right++ //go forwards in list
-
-    if (right > (carousel_C_sliders.length - 1)) { //if right is pressed again, rest loop
-        
-        right = 0; //start loop from beginning
-    }
-
-    //Images
-    image_C.src = carousel_C_sliders[right];
-
-    //Captions
-    captions_C.innerText = caption_box_C[right];
-
-    current_image = right; //current_image is where 'right' stopped
-
-    return current_image;
-
-}
 
 //the left and right button must start from the current image slot
 
