@@ -3,7 +3,7 @@ let shelfA = document.getElementById('shelfA');
 let shelfB = document.getElementById('shelfB');
 let shelfC = document.getElementById('shelfC');
 
-let booksToAdd = 20; //add to shelf
+let booksToAdd = 13; //add to shelf
 
 //add the books back to back in a loop
 //when a certain point is reached, restart the loop

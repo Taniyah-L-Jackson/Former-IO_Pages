@@ -1,0 +1,423 @@
+* {
+    box-sizing: border-box;
+}
+/*a parent-child element that keeps the interior of the border the same size regardless of the border size*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #4761f3;
+    background-image: url(../media/clouds.png);
+    /*makes the background have an image*/
+    /*color over img for specificity reasons*/
+    color: white;
+    font-family: 'Noto Serif', serif;
+}
+
+h3 {
+    font-family: 'Fondamento', cursive; 
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+/*------------------------------------------------------------------------*/
+
+.hero {
+    position: relative;
+    top: 74px;
+    width: 100%;
+}
+
+.hero--shadeOne {
+    position: absolute;
+    height: 100px;
+    width: 0%;
+    background: linear-gradient(180deg, #1F148E, #2518BA);
+    animation-name: swoosh;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    /*keeps the width on-page*/
+    opacity: 0;
+}
+
+.hero--shadeTwo {
+    position: absolute;
+    top: 100px;
+    height: 100px;
+    width: 0%;
+    background: #2518BA;
+    animation-name: swoosh;
+    animation-duration: 2s;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.hero--shadeThree {
+    position: absolute;
+    top: 200px;
+    height: 100px;
+    width: 0%;
+    background: linear-gradient(0deg, #1F148E, #2518BA);
+    border-bottom: 3px solid white;
+    animation-name: swoosh;
+    animation-duration: 2s;
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes swoosh {
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+/*background hero END--------------------------------------------------------------------*/
+.image {
+    margin-top: 10%;
+    margin-left: 45%;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-radius: 20%;
+    animation-name: fade-in;
+    animation-duration: 3s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    100% {        
+        opacity: 1;
+    }
+}
+
+/*Hero img END------------------------------------------------------------------------*/
+
+.info {
+    margin-top: 13%;
+    animation-name: fade-info;
+    animation-duration: 3s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.infoTwo {
+    animation-name: fade-info;
+    animation-duration: 3s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.info h1 {
+    font-family: 'Fondamento', cursive; 
+}
+
+.info p {
+    margin-bottom: 40px;
+    margin-top: 10px;
+    font-family: 'Noto Serif', serif;
+}
+
+@keyframes fade-info {
+    100% {
+        top: 60px;
+        
+        opacity: 1;
+    }
+}
+/*Hero small about END----------------------------------------------------------------------*/
+
+/*Hero END----------------------------------------------------------------*/
+
+.nav-bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width: 100%;
+    border-bottom: 3px solid white;
+    background: #1F148E; 
+}
+
+.nav-bar ul {
+    margin-top: 10px;
+    padding: 0px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.nav-bar li {
+    display: inline;
+}
+
+.nav-bar h1 {
+    margin: 0px;
+}
+
+.nav-bar a {
+    margin-right: 10px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: lavender;
+    color: #6767ff;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.red_pill:hover {
+    text-decoration: none;
+    animation-name: fade-red;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    /*holds the color*/
+}
+
+@keyframes fade-red {
+    100% {
+        background: red;
+        color: white;
+    }
+}
+
+.blue_pill:hover {
+    text-decoration: none;
+    animation-name: fade-blue;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-blue {
+    100% {
+        background: blue;
+        color: white;
+    }
+}
+
+.black_pill:hover {
+    text-decoration: none;
+    animation-name: fade-black;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-black {
+    100% {
+        background: black;
+        color: white;
+    }
+}
+
+/*nav-bar END---------------------------------------------------------------------------*/
+
+main {
+    margin-top: 180px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+main h2 {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    border-top: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    border-left: 10px solid whitesmoke;
+    border-right: 10px solid whitesmoke;
+    /*border corners and edges END------------------------------------------------*/
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    /*border radiuses END---------------------------------------------------------*/
+    font-size: 40px;
+    font-family: 'Fondamento', cursive; 
+}
+
+main p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0px 15px;
+}
+
+main a {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background: lavender;
+    color: #2115A1;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.exclude {
+    margin-bottom: 0px;
+}
+
+/*main END----------------------------------------------------------------------------*/
+
+.top_Half {
+    margin-bottom: 30px;
+}
+
+.top_Half img {
+    margin: 0px auto;
+}
+
+.top_Half a:hover {
+    text-decoration: none;
+    animation-name: fade-red;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+/* top_Half END------------------------------------------------------------------------*/
+
+.bottom_Half img {
+    margin: 0px auto;
+}
+
+.bottom_Half a:hover {
+    text-decoration: none;
+    animation-name: fade-blue;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+/*main END-----------------------------------------------------------------------------*/
+
+footer {
+    background: linear-gradient(0deg, #1F148E ,#2518BA);
+    border-top: 3px solid white;
+}
+
+footer ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+footer i {
+    height: 10px;
+    width: 30px;
+    padding-right: 10px;
+}
+
+footer a {
+    padding: 2px 5px;
+    color: whitesmoke;
+    border-radius: 20px;
+}
+
+footer a:hover {
+    text-decoration: none;
+    animation-name: fade-black;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+/*footer END---------------------------------------------------------------------------*/
+
+@media (max-width: 475px) {
+
+    .hero {
+        top: 59px;
+    }
+
+    .hero--shadeOne {
+        height: 150px;
+    }
+
+    .hero--shadeTwo {
+        height: 150px;
+        top: 150px;
+    }
+
+    .hero--shadeThree {
+        height: 150px;
+        top: 300px;
+    }
+
+    .block {
+        margin-top: 30px;
+        left: 0%;
+    }
+
+    .image {
+        margin-left: 20%;
+    }
+
+    .info {
+        margin-top: 18px;
+        text-align: center;
+    }
+
+    .infoTwo {
+        text-align: center;
+    }
+
+    .nav-bar a {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+
+    main {
+        margin-top: 150px;
+    }
+
+}
+
+@media (min-width: 476px) and (max-width: 768px) {
+
+    .hero {
+        top: 59px;
+    }
+
+    .block {
+        margin-top: 50px;
+        left: 0%;
+    }
+
+    .image {
+        margin: 0px auto;
+    }
+
+    .info {
+        margin-top: 5px;
+        text-align: center;
+    }
+    
+    .about {
+        margin-top: 70px;
+    }
+
+    .infoTwo {
+        text-align: center;
+    }
+
+    main {
+        margin-top: 20%;
+    }
+
+    h2 {
+        margin-top: 0px;
+    }
+
+    main a {
+        margin-bottom: 30px;
+        display: inline-block;
+        /*avoids button-picture overlap*/
+    }
+
+}
+
+/*media queries END---------------------------------------------------------------------*/
