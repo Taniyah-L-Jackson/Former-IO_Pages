@@ -318,12 +318,12 @@ p {
 }
 
 .test {
-    left: 230px;
+    left: 400px;
     background: red;
 }
 
 .certs {
-    left: 325px;
+    left: 230px;
     background: rgb(0, 128, 0);
     z-index: 2;
 }
