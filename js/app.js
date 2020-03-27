@@ -218,8 +218,8 @@ var carousel_B_list = [
 
     {image: "media/passwordMaker.png",
     caption: 'Password Maker',
-    view: 'https://github.com/Taniyah-L-Jackson/Password-Maker',
-    test: 'https://taniyah-l-jackson.github.io/Password-Maker/'},
+    view: 'https://github.com/Taniyah-L-Jackson/PasswordMaker',
+    test: 'https://taniyah-l-jackson.github.io/PasswordMaker/'},
 
     {image: "media/battleship.png",
     caption: 'BattleShip Game',
