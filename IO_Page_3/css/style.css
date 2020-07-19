@@ -59,7 +59,6 @@ button:focus {
     font-size: 45px;
     text-align: center;
     text-transform: capitalize;
-    text-shadow: 5px 1px 5px black;
 }
 
 .profile {
@@ -67,22 +66,19 @@ button:focus {
     padding-bottom: 7%;
 }
 
-.margin {
-    margin: 0px;
-    width: 100%;
-}
-
 /* --profile */
-.profile .title {
+.heroTitle .title {
+    margin: 0px;
+    padding: 75px 0px;
     background: none;
     border: none;
-    margin-bottom: 75px;
+    font-size: 55px;
 }
 
 .profileBG {
     margin: 0px;
     height: 400px;
-    background: rgb(0, 0, 0, 0.48);
+    background: rgb(0, 0, 0, 0.8);
     animation-name: swoosh;
     animation-duration: 2s;
     animation-delay: 1.4s;
@@ -101,10 +97,10 @@ button:focus {
 
 .profilePic {
     position: absolute;
-    top: -35px;
-    right: -185%;
+    top: -18px;
+    right: -94%;
     height: auto;
-    width: 85%;
+    width: 62%;
     border-radius: 20px;
     animation-name: fade-in;
     animation-duration: 1.2s;
@@ -115,10 +111,9 @@ button:focus {
 
 .intro {
     position: absolute;
-    padding: 7% 6%;
-    width: 900px;
-    font-size: 22px;
-    font-family: RobotoIt;
+    padding: 6% 0%;
+    font-size: 25px;
+    font-family: SSProReg;
     animation-name: fade-in;
     animation-duration: 1.2s;
     animation-delay: 3.5s;
@@ -136,9 +131,9 @@ button:focus {
 /* --project section */
 
 .projects {
-    margin-top: 5%;
+    margin-top: 10%;
     padding: 2% 0% 5%;
-    background: rgb(0, 0, 0, 0.48);
+    background: rgb(0, 0, 0, 0.8);
     text-align: center;
 }
 
@@ -146,6 +141,7 @@ button:focus {
     margin: 5px 0px;
     padding: 20px;
     background:#432818;
+    border-radius: 10px;
     font-size: 25px;
     font-family: SSProReg;
 }
@@ -194,6 +190,7 @@ button:focus {
 .projects a {
     padding: 18px 36px;
     background: white;
+    border-radius: 10px;
     color: black;
     font-size: 20px;
 }
@@ -230,12 +227,12 @@ button:focus {
     color: white;
 }
 
-/* --certificates section */
+/* --Certificates section */
 
 .certificates {
     margin: 10% 0%;
     padding: 2% 0% 8%;
-    background: rgb(0, 0, 0, 0.48);
+    background: rgb(0, 0, 0, 0.8);
 }
 
 .certificates .title {
@@ -273,7 +270,7 @@ button:focus {
 
 /* Footer */
 
-.footerBG  {
+.footer  {
     padding: 50px 0px;
     background: #432818;
     color: white;
@@ -281,22 +278,27 @@ button:focus {
     font-size: 13px;
 }
 
-.footerBG ul {
+.footer h4 {
+    font-size: 30px;
+}
+
+.footer ul {
     padding: 0px;
     font-family: SSProReg;
     list-style-type: none;
 }
 
-.footerBG p {
-    padding-left: 18px;
+.footer p {
+    padding-left: 15px;
+    font-size: 15px;
     display: inline;
 }
 
-.footerBG a {
+.footer a {
     color: white;
 }
 
-.footerBG a:hover {
+.footer a:hover {
     text-decoration: none;
     text-shadow: 1px 1px 5px black;
 }
@@ -305,12 +307,165 @@ button:focus {
     width: 13px;
 }
 
-.footerBG .push {
+.footer .push {
     text-align: right;
+    font-size: 35px;
 }
 
 .footerBG .fa-arrow-circle-up {
     font-size: 40px;
     text-align: right;
 }
+
+/* media queries */
+
+@media (max-width: 475px) {
+
+    /* Nav */
+
+    .home {
+        display: none;
+    }
+
+    .shift {
+        text-align: center;
+    }
+
+    .navBar li{
+        padding: 0px 40px;
+    }
+
+    /* Top Main */
+
+    .profile {
+        margin-top: 0px;
+    }
+
+    .heroTitle .title {
+        font-size: 35px;
+        margin-bottom: 35px;
+    }
+
+    .profileBG {
+        height: 350px;
+    }
+
+    .intro {
+        padding: 10% 6%;
+        font-size: 20px;
+        width: 100%;
+        text-shadow: 2px -2px 2px black;
+    }
+    
+    .profilePic {
+        display: none;
+    }
+    
+    /* Projects */
+
+    .projects {
+        margin-top: 10%;
+    }
+
+    .slotB {
+        display: none;
+    }
+
+    .slotC {
+        display: none;
+    }
+
+    .projects a {
+        padding: 18px 50px;
+    }
+
+    .projects ul {
+        margin-top: 30px;
+    }
+
+    .projects .bdb {
+        padding: 15px 0px;
+        font-size: 25px;
+    }
+
+    /* Certificates */
+
+    .certificates ul {
+        left: 25%;
+    }
+
+    .certificates img {
+        height: 400px;
+    }
+
+    /* Footer */ 
+    .footer p {
+        font-size: 13px;
+    }
+
+    .footer h4 {
+        font-size: 20px;
+    }
+
+    .footer .fas {
+        display: none;
+    }
+}
+
+@media (min-width: 476px) and (max-width: 768px) {
+
+    /* Hero */
+
+    .heroTitle .title {
+        font-size: 50px;
+    }
+
+
+    /* Top Main */
+
+    .intro { 
+        padding: 12% 3%;
+        width: 65%;
+        font-size: 20px;
+    }
+
+    .profilePic {
+        top: 70px;
+    }
+
+    /* Projects */
+
+    .projects {
+        padding: 2% 0% 6%;
+    }
+
+    .projects a {
+        padding: 18px 35px;
+    }
+
+    .slotC {
+        display: none;
+    }
+
+    .projects .bdb {
+        padding: 15px 0px;
+    }
+
+    /* Certificates */
+
+    .certificates ul {
+        left: 33%;
+    }
+
+    /* Footer */
+
+    .footer p {
+       padding-left: 10px;
+    }
+
+    .push {
+        font-size: 35px;
+    }
+}
+
 

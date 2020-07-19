@@ -236,7 +236,7 @@ var info = [
         category: 'React',
         view: 'https://github.com/Taniyah-L-Jackson/ocean_todolist',
         test: 'https://taniyah-l-jackson.github.io/ocean_todolist/',
-        image: "/media/reactCalc.png",
+        image: "/media/ocean-todolist.png",
         type: 'project'
     },
 
@@ -246,7 +246,7 @@ var info = [
         category: 'React',
         view: 'https://github.com/Taniyah-L-Jackson/Shopping_Cart/tree/gh-pages',
         test: 'https://taniyah-l-jackson.github.io/Shopping_Cart/',
-        image: "/media/reactForm.png",
+        image: "/media/shoppingCart.png",
         type: 'project'
     },
 
