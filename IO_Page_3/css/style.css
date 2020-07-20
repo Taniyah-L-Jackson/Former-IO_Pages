@@ -188,7 +188,7 @@ button:focus {
 }
 
 .projects a {
-    padding: 18px 20px;
+    padding: 18px 35px;
     background: white;
     border-radius: 10px;
     color: black;
@@ -303,7 +303,7 @@ button:focus {
     text-shadow: 1px 1px 5px black;
 }
 
-.fab {
+.fab .fas{
     width: 13px;
 }
 
@@ -332,7 +332,7 @@ button:focus {
     }
 
     .navBar li{
-        padding: 0px 40px;
+        padding: 0px 35px;
     }
 
     /* Top Main */
@@ -399,15 +399,24 @@ button:focus {
     }
 
     /* Footer */ 
-    .footer p {
-        font-size: 13px;
-    }
-
     .footer h4 {
         font-size: 20px;
     }
 
-    .footer .fas {
+    .footer li {
+        padding-right: 20px;
+        display: inline;
+    }
+
+    .footer p {
+        display: none;
+    }
+
+    .footer i {
+        font-size: 20px;
+    }
+
+    .topBtn {
         display: none;
     }
 }
@@ -419,7 +428,6 @@ button:focus {
     .heroTitle .title {
         font-size: 50px;
     }
-
 
     /* Top Main */
 
