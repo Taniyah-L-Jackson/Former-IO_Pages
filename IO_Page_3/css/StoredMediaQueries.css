@@ -1,0 +1,158 @@
+/* media queries */
+
+@media (min-width: 375px) and (max-width: 475px) {
+
+    /* Nav */
+
+    .navBar .home {
+        display: none;
+    }
+
+    .shift {
+        text-align: center;
+    }
+
+    .navBar li{
+        padding: 0px 25px;
+    }
+
+    /* Top Main */
+
+    .profile {
+        margin-top: 0px;
+    }
+
+    .heroTitle .title {
+        font-size: 35px;
+        margin-bottom: 35px;
+    }
+
+    .profileBG {
+        height: 350px;
+    }
+
+    .intro {
+        padding: 10% 8%;
+        font-size: 18px;
+        width: 100%;
+        text-shadow: 2px -2px 2px black;
+    }
+    
+    .profilePic {
+        display: none;
+    }
+    
+    /* Projects */
+
+    .projects {
+        margin-top: 10%;
+    }
+
+    .slotB {
+        display: none;
+    }
+
+    .slotC {
+        display: none;
+    }
+
+    .projects a {
+        padding: 18px 35px;
+    }
+
+    .projects ul {
+        margin-top: 30px;
+    }
+
+    .projects .bdb {
+        padding: 15px 0px;
+        font-size: 25px;
+    }
+
+    /* Certificates */
+
+    .certificates ul {
+        left: 25%;
+    }
+
+    .certificates img {
+        height: 400px;
+    }
+
+    /* Footer */ 
+    .footer h4 {
+        font-size: 20px;
+    }
+
+    .footer li {
+        padding-right: 20px;
+        display: inline;
+    }
+
+    .footer p {
+        display: none;
+    }
+
+    .footer i {
+        font-size: 20px;
+    }
+
+    .topBtn {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px){
+
+    /* Hero */
+
+    .heroTitle .title {
+        font-size: 50px;
+    }
+
+    /* Top Main */
+
+    .intro { 
+        padding: 12% 3%;
+        width: 65%;
+        font-size: 20px;
+    }
+
+    .profilePic {
+        top: 70px;
+    }
+
+    /* Projects */
+
+    .projects {
+        padding: 2% 0% 6%;
+    }
+
+    .projects a {
+        padding: 18px 32px;
+    }
+
+    .slotC {
+        display: none;
+    }
+
+    .projects .bdb {
+        padding: 15px 0px;
+    }
+
+    /* Certificates */
+
+    .certificates ul {
+        left: 33%;
+    }
+
+    /* Footer */
+
+    .footer p {
+       padding-left: 10px;
+    }
+
+    .push {
+        font-size: 35px;
+    }
+}
